@@ -4,7 +4,7 @@ function start()
     
     oNes := Nes():New()
     oNes:initNesConsole("mario.nes")
-    
+    oNes:gameLoop()
     
 return nil
 

@@ -12,10 +12,10 @@ private:
     
 public:
     method initNesConsole(cRomPath)
+    method gameLoop()
     
 private:
     method createSdlEvents()
-    method nesLoop()
 endclass
 
 method initNesConsole(cRomPath) class Nes
@@ -33,11 +33,15 @@ method initNesConsole(cRomPath) class Nes
     ::createSdlEvents()
     ::oSdl:createWindow("Teste", 512, 480)
     ::oSdl:createRenderer()
-    ::oSdl:createTexture()    
+    ::oSdl:createTexture()        
+return nil   
+
+method gameLoop() class Nes    
+    ::lNesIsRunning := .T.
     
-    * Inicializa o loop do jogo
-    ::nesLoop()
-    
+    while ::lNesIsRunning == .T.
+        ::oSdl:pollEvent()
+    enddo
 return nil
 
 method createSdlEvents() class Nes
@@ -51,10 +55,3 @@ method createSdlEvents() class Nes
     ::oSdl:setEvents(hEvents)
 return nil
 
-method nesLoop() class Nes    
-    ::lNesIsRunning := .T.
-    
-    while ::lNesIsRunning == .T.
-        ::oSdl:pollEvent()
-    enddo
-return nil
