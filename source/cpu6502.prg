@@ -20,7 +20,7 @@ public:
     data nCycle         init nil   // uint32
 endclass
 
-class Cpu6202
+class Cpu6502
 private:
     data nCycle       init 7
 
@@ -39,4 +39,15 @@ private:
     data oMapper     init nil
     data oPpu        init nil
     data oController init nil
+    
+public:
+    inline method new(oMapper, oPpu, oController)
+        ::oMapper     := oMapper
+        ::oPpu        := oPpu
+        ::oController := oController
+        
+        return self
+    endmethod
+    
 endclass
+

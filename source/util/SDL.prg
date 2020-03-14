@@ -124,7 +124,7 @@ method pollEvent() class SDL_Wrapper
     while DllCall(::pSDL_DLL, DC_CALL_CDECL, "SDL_PollEvent", ::pSDL_Event) == 1
         nEventType   := GET_SDL_EVENT_TYPE(::pSDL_Event)
         nEventSymbol := GET_SDL_EVENT_SYMBOL(::pSDL_Event)
-        
+                
         if (::hEvents != nil .AND. Hb_IsHash(::hEvents)) .AND. HHasKey(::hEvents, nEventType)
             Eval(::hEvents[nEventType], nEventSymbol)
         endif

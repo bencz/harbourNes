@@ -66,5 +66,11 @@
 #define SDL_TEXTUREACCESS_STATIC     0   /**< Changes rarely, not lockable */
 #define SDL_TEXTUREACCESS_STREAMING  1   /**< Changes frequently, lockable */
 #define SDL_TEXTUREACCESS_TARGET     2
+
+********************************************************************************
+********************************************************************************
+********************************************************************************
+
+#define SDLK_a 'a'
     
 #endif 

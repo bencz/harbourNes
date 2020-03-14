@@ -31,6 +31,11 @@ MYC_FLAGS =
 MYDEFINES =
 MYPRG_FLAGS =
 
+[source\*.prg]
+MYC_FLAGS =
+MYDEFINES =
+MYPRG_FLAGS =
+
 [source\util\*.prg]
 MYC_FLAGS =
 MYDEFINES =
