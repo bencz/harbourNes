@@ -1,8 +1,8 @@
 CINI = 
 C_OUTPUTFOLDER = 
 DEFFILE = 
-INCLUDEFOLDERS = Source\Include
-LAUTORUN = .T.
+INCLUDEFOLDERS = Source\Include;lib\SDL\include
+LAUTORUN = .F.
 LDEBUG = .F.
 LGUI = .F.
 LIBFOLDERS = 
