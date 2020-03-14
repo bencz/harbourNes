@@ -1,0 +1,7 @@
+*.$ln
+*.log
+*.txt
+
+# Build results
+[Bb]in/
+[Oo]bj/
